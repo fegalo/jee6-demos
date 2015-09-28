@@ -10,17 +10,6 @@ Description
 Libraries
 ---------
 
-<<<<<<< Upstream, based on origin/master
-Technology     | Implementation         | Reference Impl.    | Website
--------------- | ---------------------- | - | -------------------------
-CDI 1.1        | Weld-SE 1.0.1-Final    | Y | http://weld.cdi-spec.org/
-EJB 3.0        | OpenEJB  4.0.0         | N | http://tomee.apache.org/
-JPA 2.0        | EclipseLink JPA  2.5.0 | Y | http://www.eclipse.org/eclipselink/
-JMS 3.0        | ActiveMQ 5.7.0         | N | http://activemq.apache.org/
-JMS 3.0        | GlassFish 3.1.2/ Open MQ 5   | Y  | https://mq.java.net/
-JAX-WS 2.2     | Metro jaxws-ri-2.2.8         | Y  | https://jax-ws.java.net/
-JSF 2.1        | GlassFish 3.1.2/ Mojarra 2.1 | Y  | https://javaserverfaces.java.net/
-=======
 Technology    | Implementation                | Reference Impl. | Website
 ------------- | ----------------------------- | --------------- | ------------
 CDI 1.1       | Weld-SE 1.0.1-Final           | Y  | http://weld.cdi-spec.org/
@@ -30,7 +19,6 @@ JMS 3.0       | ActiveMQ 5.7.0                | N  | http://activemq.apache.org/
 JMS 3.0       | GlassFish 3.1.2/ Open MQ 5    | Y  | https://mq.java.net/
 JAX-WS 2.2    | Metro jaxws-ri-2.2.8          | Y  | https://jax-ws.java.net/
 JSF 2.1       | GlassFish 3.1.2/ Mojarra 2.1  | Y  | https://javaserverfaces.java.net/
->>>>>>> 5c94240 Fixed README
 
 Tools
 -----
