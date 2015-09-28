@@ -1,0 +1,24 @@
+.error-message {
+	color: #d20005;
+	font-family: 'New Century Schoolbook', serif;
+	font-style: oblique;
+}
+
+.table-header {
+	background-color: #005fbf;
+}
+
+.table-background {
+	font-family: "Lucida Sans Unicode","Lucida Grande",Sans-Serif;
+	margin:0px;padding:0px;
+	border: 1px solid #000000;
+	box-shadow: 10px 10px 5px #888888;
+}
+
+.table-row-even {
+	background-color: #aad4ff;
+}
+
+.table-row-odd {
+	background-color: #ffffff;
+}

@@ -1,0 +1,5 @@
+https://jersey.java.net/documentation/latest/modules-and-dependencies.html
+https://jersey.java.net/documentation/latest/deployment.html#deployment.servlet.3
+http://stackoverflow.com/questions/11405158/jboss-as-7-restful-webservices-not-auto-deploying
+http://docs.jboss.org/resteasy/docs/1.2.GA/userguide/html/Installation_Configuration.html#javax.ws.rs.core.Application
+http://www.arquitecturajava.com/rest-y-anotaciones/

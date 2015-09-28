@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+	<title>JSF Demo Example</title>
+</h:head>
+<body>
+	<h3>Simple form</h3>
+	<h:form id="myForm">
+		<h:panelGrid columns="2">
+			<h:outputLabel value="Your name:" />
+			<h:inputText id="nameff" value="#{myFormBean.name}"></h:inputText>
+
+			<h:outputLabel value="Your weight:" />
+			<h:inputText id="weight" value="#{myFormBean.weight}"></h:inputText>
+
+			<h:outputLabel value="Your birth date:" />
+			<h:inputText id="date" value="#{myFormBean.birthDate}">
+				<f:convertDateTime pattern="MM/dd/yyyy" />
+			</h:inputText>
+
+			<h:commandButton value="Save Info" action="ajaxexample">
+				<f:ajax event="click" execute="myForm" render="myForm" />
+			</h:commandButton>
+		</h:panelGrid>
+		<h:messages style="color: #d20005;
+		font-weight: bold;" />
+	</h:form>
+	<br />
+	<br />
+</body>
+</html>

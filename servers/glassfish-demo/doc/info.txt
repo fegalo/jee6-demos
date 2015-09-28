@@ -1,0 +1,9 @@
+Execute Embedded GlassFish
+
+mvn embedded-glassfish:run
+
+localhost:8080/glassfish-demo
+localhost:8080/glassfish-demo/Demo
+
+https://embedded-glassfish.java.net/
+https://embedded-glassfish.java.net/nonav/plugindocs/3.1/plugin-info.html

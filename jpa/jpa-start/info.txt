@@ -1,0 +1,4 @@
+http://www.hostettler.net/blog/2012/03/19/testing-jpa-in-java-se/
+http://www.javatips.net/blog/2013/01/eclipselink-jpa-with-hsql
+http://tomee.apache.org/examples-trunk/injection-of-entitymanager/README.html
+http://docs.oracle.com/javaee/6/tutorial/doc/bnbqw.html

@@ -1,0 +1,12 @@
+Execute Embedded JBoss
+
+mvn jboss-as:run
+http://localhost:8080/jboss-demo/
+...
+mvn jboss-as:redeploy
+
+---
+
+https://docs.jboss.org/jbossas/7/plugins/maven/latest/examples/deployment-example.html
+
+https://docs.jboss.org/jbossas/7/plugins/maven/latest/

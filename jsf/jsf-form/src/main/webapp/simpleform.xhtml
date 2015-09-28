@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+	<title>JSF Demo Example</title>
+</h:head>
+<body>
+	<h3>Simple form</h3>
+		(Form with validation and css <a href="cuteform.xhtml">here</a>)
+	<h:form>
+		<h:panelGrid columns="2">
+			<h:outputLabel value="Your name:" />
+			<h:inputText value="#{myFormBean.name}"></h:inputText>
+			<h:outputLabel value="Your age:" />
+			<h:inputText value="#{myFormBean.age}"></h:inputText>
+			<h:outputLabel value="Your gender:" />
+			<h:selectOneMenu id="shippingOption" required="true"
+				value="#{myFormBean.gender}">
+				<f:selectItem itemValue="1" itemLabel="M" />
+				<f:selectItem itemValue="2" itemLabel="F" />
+			</h:selectOneMenu>
+			<h:outputLabel value="Your weight:" />
+			<h:inputText value="#{myFormBean.weight}"></h:inputText>
+			<h:outputLabel value="Your birth date:" />
+			<h:inputText></h:inputText>
+			<h:panelGroup>
+				<h:selectBooleanCheckbox id="carLicense"
+					value="#{myFormBean.carLicense}" />
+				<h:outputLabel for="carLicense" value="Car" />
+			</h:panelGroup>
+			<h:panelGroup>
+				<h:selectBooleanCheckbox id="bikeLicense"
+					value="#{myFormBean.bikeLicense}" />
+				<h:outputLabel for="bikeLicense" value="Bike" />
+			</h:panelGroup>
+			<h:selectManyListbox id="interest" value="#{myFormBean.interests}">
+				<f:selectItem itemValue="travelling" itemLabel="Travelling" />
+				<f:selectItem itemValue="technology" itemLabel="Technology" />
+				<f:selectItem itemValue="sports" itemLabel="Sports" />
+			</h:selectManyListbox>
+			<h:commandButton value="Save Info" action="simpleform"></h:commandButton>
+		</h:panelGrid>
+	</h:form>
+	<br />
+	<br />
+</body>
+</html>

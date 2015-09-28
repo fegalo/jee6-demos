@@ -1,0 +1,3 @@
+http://tomee.apache.org/examples-trunk/jpa-eclipselink/README.html
+http://tomee.apache.org/examples-trunk/testcase-injection/README.html
+http://tomee.apache.org/ejb-annotation-example.html

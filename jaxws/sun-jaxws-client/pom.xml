@@ -1,0 +1,36 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>dev.jee6demo</groupId>
+	<artifactId>sun-jaxws-client</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<build>
+		<finalName>sun-jaxws-client</finalName>
+		<plugins>
+			<plugin>
+				<!-- wsimport for web service classes generation -->
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>jaxws-maven-plugin</artifactId>
+				<version>1.11</version>
+				<executions>
+					<execution>
+						<phase>generate-sources</phase>
+						<goals>
+							<goal>wsimport</goal>
+						</goals>
+						<configuration>
+							<packageName>dev.jee6demo.sunwsgen</packageName>
+							<wsdlFiles>
+								<wsdlFile>../../../sun-jaxws-server/src/main/webapp/WEB-INF/wsdl/HelloWSService.wsdl</wsdlFile>
+							</wsdlFiles>
+							<wsdlLocation>http://localhost:8080/sun-jaxws-server/HelloWS?wsdl</wsdlLocation>
+							<verbose>true</verbose>
+							<sourceDestDir>${basedir}/src/main/java</sourceDestDir>
+							<target>2.1</target>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+</project>

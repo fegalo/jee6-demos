@@ -1,0 +1,11 @@
+#JBOSS EMBEDDED
+mvn -Pjbeserver jboss-as:run
+mvn -Pjbeserver jboss-as:shutdown
+
+#GLASSFISH EMBEDDED
+mvn -Pgfeserver clean package embedded-glassfish:run
+mvn -Pgfeserver embedded-glassfish:stop
+
+http://localhost:8080/child-demo/
+
+

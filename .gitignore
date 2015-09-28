@@ -1,0 +1,15 @@
+# Directories ###
+build/
+bin/
+target/
+
+# Files #########
+*.class
+*.jar
+*.war
+*~
+
+# Eclipse #######
+.project
+.classpath
+.settings/

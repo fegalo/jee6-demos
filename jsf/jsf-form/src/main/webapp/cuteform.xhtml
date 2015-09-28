@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+	<title>JSF Demo Example</title>
+</h:head>
+<body>
+	<h3>Cute Form</h3>
+	(Simple form <a href="simpleform.xhtml">here</a>)
+	<h:form id="myForm">
+		<h:outputStylesheet library="css" name="style.css" />
+		<h:panelGrid columns="3"
+		headerClass="table-header"
+        styleClass="table-background"
+        rowClasses="table-row-even, table-row-odd">
+			<f:facet name="header">
+				<h:outputText value="Personal Info" />
+			</f:facet>
+			<h:outputLabel value="Your name:" />
+			<h:inputText id="name" value="#{myFormBean.name}"
+				validatorMessage="Only letters allowed (no numbers or symbols)">
+				<f:validateRegex pattern="[a-zA-Z ]*" />
+			</h:inputText>
+			<h:message showSummary="true" showDetail="false"
+				styleClass="error-message" id="name_error" for="name" />
+
+			<h:outputLabel value="Your age:" />
+			<h:inputText id="age" value="#{myFormBean.age}">
+				<f:validateLongRange minimum="0" maximum="100" />
+			</h:inputText>
+			<h:message showSummary="true" showDetail="false"
+				styleClass="error-message" id="age_error" for="age" />
+			<h:outputLabel value="Your gender:" />
+			<h:selectOneMenu id="shippingOption" required="true"
+				value="#{myFormBean.gender}">
+				<f:selectItem itemValue="1" itemLabel="M" />
+				<f:selectItem itemValue="2" itemLabel="F" />
+			</h:selectOneMenu>
+			<h:outputLabel />
+
+			<h:outputLabel value="Your weight:" />
+			<h:inputText value="#{myFormBean.weight}"></h:inputText>
+			<h:outputLabel />
+
+			<h:outputLabel value="Your birth date:" />
+			<h:inputText id="date" value="#{myFormBean.birthDate}">
+				<f:convertDateTime pattern="MM/dd/yyyy" />
+			</h:inputText>
+			<h:message showSummary="true" showDetail="false"
+				styleClass="error-message" id="date_error" for="date" />
+
+			<h:panelGroup rendered="#{myFormBean.age > 18}">
+				<h:selectBooleanCheckbox id="carLicense"
+					value="#{myFormBean.carLicense}" />
+				<h:outputLabel for="carLicense" value="Car" />
+			</h:panelGroup>
+			<h:panelGroup rendered="#{myFormBean.age > 18}">
+				<h:selectBooleanCheckbox id="bikeLicense"
+					value="#{myFormBean.bikeLicense}" />
+				<h:outputLabel for="bikeLicense" value="Bike" />
+			</h:panelGroup>
+			<h:outputLabel rendered="#{myFormBean.age > 18}" />
+
+			<h:selectManyListbox id="interest" value="#{myFormBean.interests}">
+				<f:selectItem itemValue="travelling" itemLabel="Travelling" />
+				<f:selectItem itemValue="technology" itemLabel="Technology" />
+				<f:selectItem itemValue="sports" itemLabel="Sports" />
+			</h:selectManyListbox>
+			<h:commandButton value="Save Info" action="cuteform"></h:commandButton>
+		</h:panelGrid>
+		<h:messages style="color: #d20005;
+		font-weight: bold;" />
+	</h:form>
+	<br />
+	<br />
+</body>
+</html>
